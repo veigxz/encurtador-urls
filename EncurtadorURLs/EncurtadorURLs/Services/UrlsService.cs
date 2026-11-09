@@ -1,4 +1,5 @@
-﻿using EncurtadorURLs.Data;
+﻿
+using EncurtadorURLs.Data;
 using EncurtadorURLs.Models;
 
 namespace EncurtadorURLs.Services;
@@ -9,6 +10,8 @@ namespace EncurtadorURLs.Services;
 public interface IUrlsService
 {
     Task<UrlItem> CreateShortUrlAsync(string originalUrl);
+
+    Task<UrlItem?> GetUrlByIdAsync(Guid id);
 }
 
 /// <summary>
@@ -27,9 +30,20 @@ public class UrlsService : IUrlsService
     /// Cria um novo registro de URL encurtada.
     /// </summary>
     /// <remarks>
-    /// IMPLEMENTAÇÃO PENDENTE (fase RED do TDD) — será implementada na próxima aula.
+    /// IMPLEMENTAÇÃO PENDENTE (fase RED do TDD).
     /// </remarks>
     public Task<UrlItem> CreateShortUrlAsync(string originalUrl)
+    {
+        throw new NotImplementedException();
+    }
+
+    /// <summary>
+    /// Busca uma URL pelo seu identificador.
+    /// </summary>
+    /// <remarks>
+    /// IMPLEMENTAÇÃO PENDENTE (fase RED do TDD).
+    /// </remarks>
+    public Task<UrlItem?> GetUrlByIdAsync(Guid id)
     {
         throw new NotImplementedException();
     }
